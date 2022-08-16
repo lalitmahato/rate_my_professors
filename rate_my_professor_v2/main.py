@@ -50,7 +50,11 @@ def Get_href(anchor):
     href =  anchor.find('a', href=True)['href']
     return href
 
-s = Service("C:\Program Files (x86)\chromedriver.exe")
+# uncomment driver
+# s = Service("chromedriver/chromedriver_mac64/chromedriver") # uncomment this if your os is mac64
+s = Service("chromedriver/chromedriver_linux64/chromedriver") # uncomment this if your os is linux64
+# s = Service("chromedriver/chromedriver_mac64_m1/chromedriver") # uncomment this if your os is mac64 m1
+# s = Service("chromedriver/chromedriver_win32/chromedriver.exe") # uncomment this if your os is windows
 driver = webdriver.Chrome(service=s)
 
 # Go through the url
